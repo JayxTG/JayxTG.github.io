@@ -1,36 +1,36 @@
 /* ===== CSS Variables & Design System ===== */
 :root {
-    /* Colors - Dark Futuristic Theme */
-    --bg-primary: #0a0a0f;
-    --bg-secondary: #12121a;
-    --bg-tertiary: #1a1a25;
-    --bg-card: rgba(26, 26, 37, 0.8);
+    /* Colors - Professional Academic Theme */
+    --bg-primary: #0f1419;
+    --bg-secondary: #15202b;
+    --bg-tertiary: #1c2938;
+    --bg-card: rgba(28, 41, 56, 0.85);
 
-    --accent-primary: #6366f1;
-    --accent-secondary: #8b5cf6;
-    --accent-tertiary: #a855f7;
-    --accent-gradient: linear-gradient(135deg, #6366f1 0%, #a855f7 50%, #ec4899 100%);
+    --accent-primary: #1d9bf0;
+    --accent-secondary: #7856ff;
+    --accent-tertiary: #17bf63;
+    --accent-gradient: linear-gradient(135deg, #1d9bf0 0%, #7856ff 100%);
 
-    --text-primary: #f8fafc;
-    --text-secondary: #94a3b8;
-    --text-muted: #64748b;
+    --text-primary: #f7f9f9;
+    --text-secondary: #8899a6;
+    --text-muted: #657786;
 
-    --success: #10b981;
-    --warning: #f59e0b;
-    --error: #ef4444;
+    --success: #17bf63;
+    --warning: #ffad1f;
+    --error: #e0245e;
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.03);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --glass-bg: rgba(255, 255, 255, 0.04);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Typography */
     --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-mono: 'JetBrains Mono', monospace;
 
     /* Spacing */
-    --section-padding: 100px 0;
-    --container-width: 1200px;
+    --section-padding: 80px 0;
+    --container-width: 1100px;
 
     /* Transitions */
     --transition-fast: 0.2s ease;
