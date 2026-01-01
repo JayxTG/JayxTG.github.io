@@ -232,19 +232,17 @@ function animateCounter(element, target, duration = 2000) {
         if (start < target) {
             if (target === 3.71) {
                 element.textContent = start.toFixed(2);
-            } else if (target >= 10) {
-                element.textContent = Math.floor(start) + '+';
             } else {
-                element.textContent = Math.floor(start);
+                element.textContent = Math.floor(start) + '+';
             }
             requestAnimationFrame(updateCounter);
         } else {
             if (target === 3.71) {
                 element.textContent = target.toFixed(2);
-            } else if (target >= 10) {
-                element.textContent = target + '+';
-            } else {
+            } else if (target === 2) {
                 element.textContent = target;
+            } else {
+                element.textContent = target + '+';
             }
         }
     }
