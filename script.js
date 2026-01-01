@@ -258,14 +258,14 @@ const statsObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             const statNumbers = entry.target.querySelectorAll('.stat-number');
             statNumbers.forEach(stat => {
-                const text = stat.textContent;
-                let target;
-                if (text.includes('.')) {
-                    target = parseFloat(text);
+                // Set final value directly without animation.
+                // Preserve '+' only for stats marked with data-plus="true"
+                const base = stat.textContent.replace('+', '').trim();
+                if (stat.dataset.plus === 'true') {
+                    stat.textContent = base + '+';
                 } else {
-                    target = parseInt(text.replace('+', ''));
+                    stat.textContent = base;
                 }
-                animateCounter(stat, target);
             });
             statsObserver.unobserve(entry.target);
         }
