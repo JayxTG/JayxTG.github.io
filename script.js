@@ -128,7 +128,7 @@ function createParticles() {
 
         // Style
         particle.style.position = 'absolute';
-        particle.style.background = 'rgba(37, 227, 167, 0.6)';
+        particle.style.background = 'rgba(59, 130, 246, 0.6)';
         particle.style.borderRadius = '50%';
         particle.style.animation = 'float ' + (Math.random() * 10 + 10) + 's ease-in-out infinite';
 
@@ -278,9 +278,9 @@ if (heroStats) {
 }
 
 // ===== Console Easter Egg =====
-console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #25e3a7;');
-console.log('%cCheck out my GitHub: https://github.com/JayxTG', 'font-size: 14px; color: #1cb386;');
-console.log('%c🤖 Building the future of biomedical robotics!', 'font-size: 14px; color: #17bf63;');
+console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #3b82f6;');
+console.log('%cCheck out my GitHub: https://github.com/JayxTG', 'font-size: 14px; color: #06b6d4;');
+console.log('%c🤖 Building the future of biomedical robotics!', 'font-size: 14px; color: #10b981;');
 
 // ===== Page Load Animation =====
 document.addEventListener('DOMContentLoaded', () => {

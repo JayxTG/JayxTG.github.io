@@ -1,27 +1,27 @@
 /* ===== CSS Variables & Design System ===== */
 :root {
-    /* Colors - A Researcher's Guide Inspired Theme */
-    --bg-primary: #070e08;
-    --bg-secondary: #0d1610;
-    --bg-tertiary: #141f18;
-    --bg-card: rgba(20, 50, 35, 0.85);
+    /* Colors - Professional Academic Robotics Theme */
+    --bg-primary: #0a0f1a;
+    --bg-secondary: #111827;
+    --bg-tertiary: #1a2332;
+    --bg-card: rgba(26, 35, 50, 0.9);
 
-    --accent-primary: #25e3a7;
-    --accent-secondary: #1cb386;
-    --accent-tertiary: #17bf63;
-    --accent-gradient: linear-gradient(135deg, #25e3a7 0%, #17bf63 100%);
+    --accent-primary: #3b82f6;
+    --accent-secondary: #06b6d4;
+    --accent-tertiary: #10b981;
+    --accent-gradient: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%);
 
-    --text-primary: #f7f9f9;
-    --text-secondary: #a0b8a8;
-    --text-muted: #6b8b6b;
+    --text-primary: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --text-muted: #64748b;
 
-    --success: #17bf63;
-    --warning: #ffad1f;
-    --error: #e0245e;
+    --success: #10b981;
+    --warning: #f59e0b;
+    --error: #ef4444;
 
     /* Glassmorphism */
-    --glass-bg: rgba(37, 227, 167, 0.05);
-    --glass-border: rgba(37, 227, 167, 0.15);
+    --glass-bg: rgba(59, 130, 246, 0.05);
+    --glass-border: rgba(59, 130, 246, 0.15);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Typography */
@@ -67,9 +67,9 @@ body {
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(ellipse at 20% 20%, rgba(37, 227, 167, 0.12) 0%, transparent 50%),
-        radial-gradient(ellipse at 80% 80%, rgba(28, 179, 134, 0.12) 0%, transparent 50%),
-        radial-gradient(ellipse at 50% 50%, rgba(23, 191, 99, 0.08) 0%, transparent 50%);
+        radial-gradient(ellipse at 20% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(16, 185, 129, 0.08) 0%, transparent 50%);
     z-index: -2;
     animation: gradientShift 15s ease-in-out infinite;
 }
@@ -236,18 +236,17 @@ body {
     font-size: 0.85rem;
     color: var(--accent-primary);
     margin-bottom: 24px;
-    animation: pulse 2s ease-in-out infinite;
 }
 
 @keyframes pulse {
 
     0%,
     100% {
-        box-shadow: 0 0 0 0 rgba(37, 227, 167, 0.4);
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
     }
 
     50% {
-        box-shadow: 0 0 0 10px rgba(37, 227, 167, 0);
+        box-shadow: 0 0 0 10px rgba(59, 130, 246, 0);
     }
 }
 
@@ -341,12 +340,12 @@ body {
 .btn-primary {
     background: var(--accent-gradient);
     color: white;
-    box-shadow: 0 4px 20px rgba(37, 227, 167, 0.4);
+    box-shadow: 0 4px 20px rgba(59, 130, 246, 0.4);
 }
 
 .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 30px rgba(37, 227, 167, 0.5);
+    box-shadow: 0 6px 30px rgba(59, 130, 246, 0.5);
 }
 
 .btn-secondary {
@@ -444,8 +443,8 @@ body {
     padding: 5px;
     background: var(--accent-gradient);
     box-shadow:
-        0 0 40px rgba(37, 227, 167, 0.3),
-        0 0 80px rgba(28, 179, 134, 0.2);
+        0 0 40px rgba(59, 130, 246, 0.3),
+        0 0 80px rgba(6, 182, 212, 0.2);
 }
 
 .profile-image {
@@ -645,7 +644,7 @@ body {
 .education-card:hover {
     transform: translateY(-5px);
     border-color: var(--accent-primary);
-    box-shadow: 0 10px 40px rgba(37, 227, 167, 0.2);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.2);
 }
 
 .edu-icon {
@@ -734,7 +733,7 @@ body {
     background: var(--accent-primary);
     border-radius: 50%;
     border: 3px solid var(--bg-secondary);
-    box-shadow: 0 0 0 4px rgba(37, 227, 167, 0.3);
+    box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
 }
 
 .timeline-content {
@@ -832,8 +831,8 @@ body {
 
 .timeline-tech span {
     padding: 4px 12px;
-    background: rgba(37, 227, 167, 0.1);
-    border: 1px solid rgba(37, 227, 167, 0.3);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 20px;
     font-size: 0.75rem;
     color: var(--accent-primary);
@@ -885,7 +884,7 @@ body {
 .project-card:hover {
     transform: translateY(-8px);
     border-color: var(--accent-primary);
-    box-shadow: 0 20px 60px rgba(37, 227, 167, 0.15);
+    box-shadow: 0 20px 60px rgba(59, 130, 246, 0.15);
 }
 
 .project-header {
@@ -951,7 +950,7 @@ body {
 
 .project-tech span {
     padding: 4px 10px;
-    background: rgba(37, 227, 167, 0.1);
+    background: rgba(59, 130, 246, 0.1);
     border-radius: 6px;
     font-size: 0.75rem;
     color: var(--accent-primary);
@@ -1220,7 +1219,7 @@ body {
 .teaching-card:hover {
     border-color: var(--accent-primary);
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(37, 227, 167, 0.15);
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
 }
 
 .teaching-header {
@@ -1236,7 +1235,7 @@ body {
     border-radius: 25px;
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(37, 227, 167, 0.3);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .teaching-date {
@@ -1273,8 +1272,8 @@ body {
 
 .teaching-topics li {
     padding: 8px 16px;
-    background: rgba(37, 227, 167, 0.1);
-    border: 1px solid rgba(37, 227, 167, 0.3);
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.3);
     border-radius: 25px;
     font-size: 0.85rem;
     color: var(--accent-primary);
@@ -1282,7 +1281,7 @@ body {
 }
 
 .teaching-topics li:hover {
-    background: rgba(37, 227, 167, 0.2);
+    background: rgba(59, 130, 246, 0.2);
     transform: translateY(-2px);
 }
 
@@ -1326,13 +1325,13 @@ body {
     height: 12px;
     background: var(--accent-primary);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 15px rgba(37, 227, 167, 0.5);
+    box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 15px rgba(59, 130, 246, 0.5);
 }
 
 .news-item:hover {
     border-color: var(--accent-primary);
     transform: translateX(10px);
-    box-shadow: 0 10px 30px rgba(37, 227, 167, 0.1);
+    box-shadow: 0 10px 30px rgba(59, 130, 246, 0.1);
 }
 
 .news-item:last-child {
@@ -1350,7 +1349,7 @@ body {
     font-size: 0.8rem;
     text-align: center;
     height: fit-content;
-    box-shadow: 0 4px 15px rgba(37, 227, 167, 0.3);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
 }
 
 .news-content {
