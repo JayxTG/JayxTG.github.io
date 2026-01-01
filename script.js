@@ -128,7 +128,7 @@ function createParticles() {
 
         // Style
         particle.style.position = 'absolute';
-        particle.style.background = 'rgba(99, 102, 241, 0.6)';
+        particle.style.background = 'rgba(37, 227, 167, 0.6)';
         particle.style.borderRadius = '50%';
         particle.style.animation = 'float ' + (Math.random() * 10 + 10) + 's ease-in-out infinite';
 
@@ -232,6 +232,8 @@ function animateCounter(element, target, duration = 2000) {
         if (start < target) {
             if (target === 3.71) {
                 element.textContent = start.toFixed(2);
+            } else if (target === 1) {
+                element.textContent = '1';
             } else {
                 element.textContent = Math.floor(start) + '+';
             }
@@ -239,8 +241,8 @@ function animateCounter(element, target, duration = 2000) {
         } else {
             if (target === 3.71) {
                 element.textContent = target.toFixed(2);
-            } else if (target === 2) {
-                element.textContent = target;
+            } else if (target === 1) {
+                element.textContent = '1';
             } else {
                 element.textContent = target + '+';
             }
@@ -276,9 +278,9 @@ if (heroStats) {
 }
 
 // ===== Console Easter Egg =====
-console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #6366f1;');
-console.log('%cCheck out my GitHub: https://github.com/JayxTG', 'font-size: 14px; color: #8b5cf6;');
-console.log('%c🤖 Building the future of biomedical robotics!', 'font-size: 14px; color: #a855f7;');
+console.log('%c👋 Hey there, curious developer!', 'font-size: 20px; font-weight: bold; color: #25e3a7;');
+console.log('%cCheck out my GitHub: https://github.com/JayxTG', 'font-size: 14px; color: #1cb386;');
+console.log('%c🤖 Building the future of biomedical robotics!', 'font-size: 14px; color: #17bf63;');
 
 // ===== Page Load Animation =====
 document.addEventListener('DOMContentLoaded', () => {
