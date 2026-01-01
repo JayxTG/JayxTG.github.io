@@ -1648,6 +1648,43 @@ body {
     .container {
         padding: 0 16px;
     }
+
+    /* Education cards mobile fix */
+    .education-card {
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .edu-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.2rem;
+    }
+
+    .edu-content h4 {
+        font-size: 1rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .edu-content .institution {
+        font-size: 0.85rem;
+        word-wrap: break-word;
+    }
+
+    .edu-content .major {
+        font-size: 0.8rem;
+    }
+
+    .edu-meta {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .edu-meta span {
+        font-size: 0.8rem;
+    }
 }
 
 /* ===== Animations on Scroll ===== */
