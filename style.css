@@ -1303,13 +1303,22 @@ body {
     }
 
     .hero {
-        padding: 100px 20px 60px;
+        padding: 100px 16px 60px;
         min-height: auto;
+        overflow-x: hidden;
+    }
+
+    .hero-content {
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .hero-badge {
-        font-size: 0.75rem;
-        padding: 6px 12px;
+        font-size: 0.7rem;
+        padding: 6px 10px;
+        white-space: normal;
+        text-align: center;
+        line-height: 1.4;
     }
 
     .hero-title .greeting {
@@ -1317,12 +1326,15 @@ body {
     }
 
     .hero-title .name {
-        font-size: 2.2rem;
+        font-size: 2rem;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
     }
 
     .hero-subtitle {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
         margin-bottom: 24px;
+        padding: 0 10px;
     }
 
     .hero-stats {
@@ -1545,24 +1557,26 @@ body {
 /* Small Mobile Phones */
 @media (max-width: 480px) {
     .container {
-        padding: 0 16px;
+        padding: 0 12px;
     }
 
     .hero {
-        padding: 90px 16px 50px;
+        padding: 90px 12px 50px;
     }
 
     .hero-badge {
-        font-size: 0.7rem;
+        font-size: 0.65rem;
+        padding: 5px 8px;
     }
 
     .hero-title .name {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .hero-subtitle {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         line-height: 1.6;
+        padding: 0 5px;
     }
 
     .hero-stats {
