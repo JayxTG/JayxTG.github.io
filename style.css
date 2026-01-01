@@ -1390,12 +1390,30 @@ body {
         font-size: 1.1rem;
     }
 
+    .about-text {
+        text-align: center;
+    }
+
     .about-intro {
         font-size: 1rem;
+        text-align: center;
+    }
+
+    .research-interests {
+        text-align: center;
     }
 
     .research-interests h3 {
         font-size: 1.1rem;
+        justify-content: center;
+    }
+
+    .research-interests ul {
+        text-align: left;
+    }
+
+    .research-interests li {
+        justify-content: flex-start;
     }
 
     .education-card {
