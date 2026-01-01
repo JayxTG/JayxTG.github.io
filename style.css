@@ -1,27 +1,27 @@
 /* ===== CSS Variables & Design System ===== */
 :root {
-    /* Colors - Professional Academic Theme */
-    --bg-primary: #0f1419;
-    --bg-secondary: #15202b;
-    --bg-tertiary: #1c2938;
-    --bg-card: rgba(28, 41, 56, 0.85);
+    /* Colors - A Researcher's Guide Inspired Theme */
+    --bg-primary: #070e08;
+    --bg-secondary: #0d1610;
+    --bg-tertiary: #141f18;
+    --bg-card: rgba(20, 50, 35, 0.85);
 
-    --accent-primary: #1d9bf0;
-    --accent-secondary: #7856ff;
+    --accent-primary: #25e3a7;
+    --accent-secondary: #1cb386;
     --accent-tertiary: #17bf63;
-    --accent-gradient: linear-gradient(135deg, #1d9bf0 0%, #7856ff 100%);
+    --accent-gradient: linear-gradient(135deg, #25e3a7 0%, #17bf63 100%);
 
     --text-primary: #f7f9f9;
-    --text-secondary: #8899a6;
-    --text-muted: #657786;
+    --text-secondary: #a0b8a8;
+    --text-muted: #6b8b6b;
 
     --success: #17bf63;
     --warning: #ffad1f;
     --error: #e0245e;
 
     /* Glassmorphism */
-    --glass-bg: rgba(255, 255, 255, 0.04);
-    --glass-border: rgba(255, 255, 255, 0.1);
+    --glass-bg: rgba(37, 227, 167, 0.05);
+    --glass-border: rgba(37, 227, 167, 0.15);
     --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 
     /* Typography */
@@ -1212,7 +1212,7 @@ body {
 .teaching-card:hover {
     border-color: var(--accent-primary);
     transform: translateY(-5px);
-    box-shadow: 0 20px 40px rgba(29, 155, 240, 0.15);
+    box-shadow: 0 20px 40px rgba(37, 227, 167, 0.15);
 }
 
 .teaching-header {
@@ -1228,7 +1228,7 @@ body {
     border-radius: 25px;
     font-size: 0.8rem;
     font-weight: 600;
-    box-shadow: 0 4px 15px rgba(29, 155, 240, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 227, 167, 0.3);
 }
 
 .teaching-date {
@@ -1265,8 +1265,8 @@ body {
 
 .teaching-topics li {
     padding: 8px 16px;
-    background: rgba(29, 155, 240, 0.1);
-    border: 1px solid rgba(29, 155, 240, 0.3);
+    background: rgba(37, 227, 167, 0.1);
+    border: 1px solid rgba(37, 227, 167, 0.3);
     border-radius: 25px;
     font-size: 0.85rem;
     color: var(--accent-primary);
@@ -1274,7 +1274,7 @@ body {
 }
 
 .teaching-topics li:hover {
-    background: rgba(29, 155, 240, 0.2);
+    background: rgba(37, 227, 167, 0.2);
     transform: translateY(-2px);
 }
 
@@ -1318,13 +1318,13 @@ body {
     height: 12px;
     background: var(--accent-primary);
     border-radius: 50%;
-    box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 15px rgba(29, 155, 240, 0.5);
+    box-shadow: 0 0 0 4px var(--bg-secondary), 0 0 15px rgba(37, 227, 167, 0.5);
 }
 
 .news-item:hover {
     border-color: var(--accent-primary);
     transform: translateX(10px);
-    box-shadow: 0 10px 30px rgba(29, 155, 240, 0.1);
+    box-shadow: 0 10px 30px rgba(37, 227, 167, 0.1);
 }
 
 .news-item:last-child {
@@ -1342,7 +1342,7 @@ body {
     font-size: 0.8rem;
     text-align: center;
     height: fit-content;
-    box-shadow: 0 4px 15px rgba(29, 155, 240, 0.3);
+    box-shadow: 0 4px 15px rgba(37, 227, 167, 0.3);
 }
 
 .news-content {
