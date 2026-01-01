@@ -118,9 +118,14 @@ body {
 }
 
 .navbar.scrolled {
-    background: rgba(7, 14, 8, 0.95);
-    backdrop-filter: blur(20px);
-    border-bottom: 1px solid var(--glass-border);
+    /* Semi-transparent to let page content show through */
+    background: rgba(10, 20, 35, 0.60);
+    /* Subtle blur of the content beneath the navbar */
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    /* Softer border and slight shadow for depth */
+    border-bottom: 1px solid rgba(59, 130, 246, 0.06);
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.35);
 }
 
 .nav-container {
