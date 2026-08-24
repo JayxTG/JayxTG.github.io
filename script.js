@@ -1,5 +1,5 @@
 /* ============================================
-   APPLE-INSPIRED PORTFOLIO — Interactive JS
+   LIQUID GLASS PORTFOLIO — Interactive JS
    ============================================ */
 
 // ── Typed hero text (types once, cursor blinks) ──
@@ -12,6 +12,7 @@ function typeLoop() {
     el.textContent = TITLE.slice(0, charIdx++);
     setTimeout(typeLoop, charIdx <= TITLE.length ? 55 : 0);
   }
+  // cursor keeps blinking via CSS after typing finishes
 }
 document.addEventListener('DOMContentLoaded', () => setTimeout(typeLoop, 700));
 
@@ -82,8 +83,7 @@ filterBtns.forEach(btn => {
     projectCards.forEach(card => {
       const cats = card.dataset.category || '';
       const show = filter === 'all' || cats.split(' ').includes(filter);
-      // use display none for crisp re-flow
-      card.style.display = show ? '' : 'none';
+      card.classList.toggle('hidden', !show);
     });
   });
 });
@@ -96,5 +96,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     e.preventDefault();
     const top = target.getBoundingClientRect().top + window.scrollY - 80;
     window.scrollTo({ top, behavior: 'smooth' });
+  });
+});
+
+// ── Subtle card tilt on mouse move ──
+document.querySelectorAll('.glass').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const { left, top, width, height } = card.getBoundingClientRect();
+    const x = (e.clientX - left) / width  - 0.5;
+    const y = (e.clientY - top)  / height - 0.5;
+    card.style.transform = `perspective(600px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg) translateY(-3px)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
   });
 });
