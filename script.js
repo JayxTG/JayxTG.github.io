@@ -2,35 +2,19 @@
    LIQUID GLASS PORTFOLIO — Interactive JS
    ============================================ */
 
-// ── Typed hero text ──
-const typedStrings = [
-  'Biomedical Robotics Engineer',
-  'Computer Vision Researcher',
-  'Embedded Systems Developer',
-  'BCI & EEG Specialist',
-];
-let typedIdx = 0, charIdx = 0, deleting = false;
+// ── Typed hero text (types once, cursor blinks) ──
+const TITLE = 'Robotics & Unmanned Vehicles Engineer';
+let charIdx = 0;
 function typeLoop() {
   const el = document.getElementById('typed-text');
   if (!el) return;
-  const current = typedStrings[typedIdx];
-  if (!deleting) {
-    el.textContent = current.slice(0, ++charIdx);
-    if (charIdx === current.length) {
-      deleting = true;
-      setTimeout(typeLoop, 2200);
-      return;
-    }
-  } else {
-    el.textContent = current.slice(0, --charIdx);
-    if (charIdx === 0) {
-      deleting = false;
-      typedIdx = (typedIdx + 1) % typedStrings.length;
-    }
+  if (charIdx <= TITLE.length) {
+    el.textContent = TITLE.slice(0, charIdx++);
+    setTimeout(typeLoop, charIdx <= TITLE.length ? 55 : 0);
   }
-  setTimeout(typeLoop, deleting ? 45 : 75);
+  // cursor keeps blinking via CSS after typing finishes
 }
-document.addEventListener('DOMContentLoaded', () => setTimeout(typeLoop, 600));
+document.addEventListener('DOMContentLoaded', () => setTimeout(typeLoop, 700));
 
 // ── Navbar scroll ──
 const navbar = document.getElementById('navbar');
