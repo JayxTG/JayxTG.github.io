@@ -1,0 +1,35 @@
+# Jayamadu Gammune — Robotics & Autonomous Systems Engineer
+
+> Biomedical Engineering graduate (Robotics & Automation) at the University of Moratuwa, Sri Lanka. Researcher in autonomous robotic systems, computer vision, GPU-accelerated medical imaging, learning-based control, and embedded systems. Open to PhD and research positions from Fall 2027.
+
+## About
+
+Jayamadu Gammune is a Biomedical Engineering graduate from the University of Moratuwa (Robotics & Automation pathway) with research experience at Swinburne University's Intelligent Robotics Laboratory (Melbourne, Australia) under Assoc. Prof. Mats Isaksson. His work spans GPU-accelerated robotic ultrasound imaging, vision-language models for robotic manipulation, EEG-based brain-computer interfaces, and autonomous embedded systems.
+
+## Research Interests
+
+- Robotics & learning-based control for manipulation
+- Soft robotics and novel robotic mechanisms
+- Mechatronic system design — UAVs & unmanned vehicles
+- Computer vision & deep learning for perception
+- Vision-language models for task understanding
+- GPU-accelerated medical imaging
+
+## Key Projects
+
+- **RoboBrain 2.0**: Augmented CVPR 2025 baseline with LLM layer; 50% memory reduction via 8-bit quantization
+- **GPU-Accelerated Robotic Ultrasound**: CUDA pipeline achieving 40% latency reduction in lumbar spine landmark detection
+- **Pediatric EEG-Based BCI**: 5-DOF robotic arm controlled via real-time EEG and custom low-noise PCBs
+- **Autonomous Micromouse**: STM32-based FloodFill maze-solving robot with FOC motor control
+- **SLRC 2024 Robot**: National robotics competition autonomous mobile robot
+
+## Education
+
+- B.Sc. Engineering (Honours), Biomedical Engineering — Robotics & Automation, University of Moratuwa, Sri Lanka
+
+## Contact
+
+- Email: gammunedjt.21@uom.lk
+- GitHub: https://github.com/JayxTG
+- LinkedIn: https://www.linkedin.com/in/jayamadu-gammune-66a679271/
+- Portfolio: https://jayxtg.github.io/
