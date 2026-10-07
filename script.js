@@ -1,117 +1,112 @@
-/* ============================================
-   HYBRID PORTFOLIO — Interactive JS
-   ============================================ */
+(() => {
+  document.documentElement.classList.add('js-ready');
+  const menu = document.querySelector('.menu');
+  const mobileNav = document.querySelector('.mobile-nav');
+  const modes = document.querySelectorAll('.mode');
+  const startScreen = document.querySelector('.start-screen');
+  const startOutput = document.querySelector('.start-output');
+  const root = document.documentElement;
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// ── Typed hero text (types once, cursor blinks) ──
-const TITLE = 'Robotics & Unmanned Vehicles Engineer';
-let charIdx = 0;
-function typeLoop() {
-  const el = document.getElementById('typed-text');
-  if (!el) return;
-  if (charIdx <= TITLE.length) {
-    el.textContent = TITLE.slice(0, charIdx++);
-    setTimeout(typeLoop, charIdx <= TITLE.length ? 55 : 0);
-  }
-}
-document.addEventListener('DOMContentLoaded', () => setTimeout(typeLoop, 700));
+  const openMenu = (open) => {
+    menu.setAttribute('aria-expanded', String(open));
+    mobileNav.setAttribute('aria-hidden', String(!open));
+    mobileNav.classList.toggle('open', open);
+  };
+  menu.addEventListener('click', () => openMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  mobileNav.querySelectorAll('a').forEach((link) => link.addEventListener('click', () => openMenu(false)));
 
-// ── Navbar scroll ──
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 40);
-}, { passive: true });
-
-// ── Mobile nav toggle ──
-const navToggle = document.getElementById('nav-toggle');
-const navLinks  = document.getElementById('nav-links');
-navToggle?.addEventListener('click', () => {
-  const open = navLinks.classList.toggle('open');
-  navToggle.setAttribute('aria-expanded', open);
-  const spans = navToggle.querySelectorAll('span');
-  if (open) {
-    spans[0].style.transform = 'rotate(45deg) translate(5px,5px)';
-    spans[1].style.opacity   = '0';
-    spans[2].style.transform = 'rotate(-45deg) translate(5px,-5px)';
-  } else {
-    spans.forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-  }
-});
-// close on link click
-navLinks?.querySelectorAll('a').forEach(a => {
-  a.addEventListener('click', () => {
-    navLinks.classList.remove('open');
-    navToggle.setAttribute('aria-expanded', 'false');
-    navToggle.querySelectorAll('span').forEach(s => { s.style.transform = ''; s.style.opacity = ''; });
-  });
-});
-
-// ── Active nav highlight ──
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-const io = new IntersectionObserver(entries => {
-  entries.forEach(e => {
-    if (e.isIntersecting) {
-      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${e.target.id}`));
-    }
-  });
-}, { rootMargin: '-40% 0px -40% 0px' });
-sections.forEach(s => io.observe(s));
-
-// ── Scroll reveal ──
-const revealEls = document.querySelectorAll('.reveal');
-const revealObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
-}, { threshold: 0.12 });
-revealEls.forEach(el => revealObs.observe(el));
-
-// ── Skill bars ──
-const skillFills = document.querySelectorAll('.skill-fill');
-const skillObs = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('animated'); skillObs.unobserve(e.target); } });
-}, { threshold: 0.5 });
-skillFills.forEach(f => skillObs.observe(f));
-
-// ── Project filter ──
-const filterBtns = document.querySelectorAll('.filter-btn');
-const projectCards = document.querySelectorAll('.project-card');
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    const filter = btn.dataset.filter;
-    projectCards.forEach(card => {
-      const cats = card.dataset.category || '';
-      const show = filter === 'all' || cats.split(' ').includes(filter);
-      // use display none for crisp re-flow
-      card.style.display = show ? '' : 'none';
+  root.dataset.mode = 'light';
+  const updateMode = () => {
+    const green = root.dataset.mode === 'green';
+    modes.forEach((mode) => {
+      mode.setAttribute('aria-pressed', String(green));
+      mode.innerHTML = `MODE: <b>${green ? 'GREEN' : 'LIGHT'}</b>`;
     });
-  });
-});
+  };
+  updateMode();
+  modes.forEach((mode) => mode.addEventListener('click', () => {
+    root.dataset.mode = root.dataset.mode === 'green' ? 'light' : 'green';
+    localStorage.setItem('jg-mode', root.dataset.mode);
+    updateMode();
+  }));
 
-// ── Smooth scroll offset for fixed nav ──
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (!target) return;
-    e.preventDefault();
-    const top = target.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: 'smooth' });
+  const slides = [...document.querySelectorAll('.life-slide')];
+  const dots = [...document.querySelectorAll('.life-dots button')];
+  let activeSlide = 0;
+  let rotationTimer;
+  const showSlide = (index) => {
+    activeSlide = (index + slides.length) % slides.length;
+    slides.forEach((slide, slideIndex) => {
+      const active = slideIndex === activeSlide;
+      slide.classList.toggle('is-active', active);
+      slide.setAttribute('aria-hidden', String(!active));
+    });
+    dots.forEach((dot, dotIndex) => {
+      const active = dotIndex === activeSlide;
+      dot.classList.toggle('is-active', active);
+      dot.setAttribute('aria-selected', String(active));
+    });
+  };
+  const carousel = document.querySelector('.life-carousel');
+  const rotate = () => showSlide(activeSlide + 1);
+  const startRotation = () => {
+    window.clearInterval(rotationTimer);
+    rotationTimer = window.setInterval(rotate, 5000);
+  };
+  const manualSlide = (index) => {
+    showSlide(index);
+    startRotation();
+  };
+  document.querySelector('.life-prev')?.addEventListener('click', () => manualSlide(activeSlide - 1));
+  document.querySelector('.life-next')?.addEventListener('click', () => manualSlide(activeSlide + 1));
+  dots.forEach((dot, dotIndex) => dot.addEventListener('click', () => manualSlide(dotIndex)));
+  carousel?.addEventListener('mouseenter', () => window.clearInterval(rotationTimer));
+  carousel?.addEventListener('mouseleave', startRotation);
+  carousel?.addEventListener('focusin', () => window.clearInterval(rotationTimer));
+  carousel?.addEventListener('focusout', startRotation);
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden) window.clearInterval(rotationTimer);
+    else startRotation();
   });
-});
+  startRotation();
 
-// ── Subtle card tilt on mouse move (Restored from Liquid Glass) ──
-document.querySelectorAll('.glass').forEach(card => {
-  // Prevent tilt on smaller devices where it feels clunky
-  if (window.innerWidth < 768) return;
-  
-  card.addEventListener('mousemove', e => {
-    const { left, top, width, height } = card.getBoundingClientRect();
-    const x = (e.clientX - left) / width  - 0.5;
-    const y = (e.clientY - top)  / height - 0.5;
-    // max rotation 5 degrees
-    card.style.transform = `perspective(800px) rotateY(${x * 8}deg) rotateX(${-y * 8}deg) translateY(-3px) scale(1.02)`;
-  });
-  card.addEventListener('mouseleave', () => {
-    card.style.transform = '';
-  });
-});
+  const bootLines = [
+    'INITIALIZING FIELDNET KERNEL ............ OK',
+    'LOADING UAV & ROBOTICS SYSTEMS INDEX .... OK',
+    'MOUNTING ROBOTICS / AUTONOMY ARCHIVE .... OK',
+    'VERIFYING OPERATOR PROFILE .............. OK',
+    'ESTABLISHING LOCAL CONSOLE .............. READY'
+  ];
+  let lineIndex = 0;
+  const printLine = () => {
+    if (lineIndex < bootLines.length) {
+      const line = document.createElement('p');
+      line.textContent = bootLines[lineIndex++];
+      startOutput.append(line);
+      window.setTimeout(printLine, reduced ? 45 : 190);
+    } else {
+      window.setTimeout(() => {
+        startScreen.classList.add('is-complete');
+        document.body.classList.remove('is-booting');
+        startScreen.setAttribute('aria-hidden', 'true');
+      }, reduced ? 120 : 700);
+    }
+  };
+  document.body.classList.add('is-booting');
+  window.setTimeout(printLine, reduced ? 30 : 260);
+
+  if (reduced || typeof IntersectionObserver === 'undefined') {
+    document.querySelectorAll('.reveal').forEach((el) => el.classList.add('is-visible'));
+  } else {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: .12 });
+    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  }
+})();
