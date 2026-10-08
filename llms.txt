@@ -33,3 +33,13 @@ Jayamadu Gammune is a Biomedical Engineering graduate from the University of Mor
 - GitHub: https://github.com/JayxTG
 - LinkedIn: https://www.linkedin.com/in/jayamadu-gammune-66a679271/
 - Portfolio: https://jayxtg.github.io/
+
+## Pages
+
+- Home: https://jayxtg.github.io/
+- Projects: https://jayxtg.github.io/projects.html
+- Research: https://jayxtg.github.io/research.html
+- Experience & certifications: https://jayxtg.github.io/experience.html
+- About & education: https://jayxtg.github.io/about.html
+- Life beyond work: https://jayxtg.github.io/life.html
+- Contact: https://jayxtg.github.io/contact.html
