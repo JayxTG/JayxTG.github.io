@@ -1,133 +1,138 @@
 <!doctype html>
-<html lang="en" data-mode="light">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>JG_FIELDNET // Robotics &amp; Autonomous Systems</title>
+  <title>Jayamadu Gammune | Robotics &amp; Autonomous Systems</title>
   <meta name="description" content="The engineering portfolio of Jayamadu Gammune: UAVs, robotics, computer vision, embedded control, and autonomous systems.">
+  <link rel="canonical" href="https://jayxtg.github.io/">
+  <meta name="theme-color" content="#0c0c0d">
+  <meta property="og:title" content="Jayamadu Gammune | Robotics &amp; Autonomous Systems">
+  <meta property="og:description" content="The engineering portfolio of Jayamadu Gammune: UAVs, robotics, computer vision, embedded control, and autonomous systems.">
+  <meta property="og:url" content="https://jayxtg.github.io/">
+  <meta property="og:image" content="https://jayxtg.github.io/img/IMG_2690NEW.png">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/iconoir@7.11.0/css/iconoir.css">
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="crt" aria-hidden="true"></div>
-  <section class="start-screen" id="start-screen" aria-label="Fieldnet boot sequence">
-    <div class="start-frame">
-      <p class="start-brand">JG_FIELDNET // SECURE FIELD CONSOLE</p>
-      <div class="start-output" role="status" aria-live="polite"></div>
-      <div class="start-progress"><span></span></div>
-      <p class="start-hint">STANDBY<span class="cursor" aria-hidden="true"></span></p>
+<body id="top">
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="index.html" aria-label="Jayamadu Gammune, home"><span class="brand-mark">JG</span><span class="brand-name">Jayamadu Gammune</span></a>
+      <nav class="nav" aria-label="Primary">
+        <a href="projects.html">Projects</a><a href="research.html">Research</a><a href="experience.html">Experience</a><a href="about.html">About</a><a href="life.html">Life</a><a href="contact.html">Contact</a>
+      </nav>
+      <a class="pill-btn header-cv" href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">Résumé <i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><b class="sr">Open navigation</b></button>
     </div>
-  </section>
-  <a class="skip" href="#main">[skip terminal intro]</a>
-  <header class="topbar">
-    <a class="brand" href="#home" aria-label="JG field systems home"><b>JG_FIELDNET</b><span>OPS/2.026</span></a>
-    <nav aria-label="Terminal navigation">
-      <a href="#work">[01_WORK]</a><a href="#research">[02_RESEARCH]</a><a href="#about">[03_ABOUT]</a><a href="#experience">[04_RECORDS]</a><a href="#beyond">[05_BEYOND]</a><a href="#contact">[06_CONTACT]</a>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile">
+      <a href="index.html" aria-current="page">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="experience.html">Experience</a><a href="about.html">About</a><a href="life.html">Life</a><a href="contact.html">Contact</a>
+      <a class="pill-btn" href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">Download résumé <i class="iconoir-download" aria-hidden="true"></i></a>
     </nav>
-    <button class="mode" type="button" aria-pressed="false" aria-label="Switch display mode">MODE: <b>LIGHT</b></button>
-    <button class="menu" type="button" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span><b class="sr">Open navigation</b></button>
   </header>
-  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile terminal navigation" aria-hidden="true"><a href="#work">[01_WORK]</a><a href="#research">[02_RESEARCH]</a><a href="#about">[03_ABOUT]</a><a href="#experience">[04_RECORDS]</a><a href="#beyond">[05_BEYOND]</a><a href="#contact">[06_CONTACT]</a><a href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">[OPEN_CV]</a><button class="mode mobile-mode" type="button" aria-pressed="false" aria-label="Switch display mode">MODE: <b>LIGHT</b></button></nav>
 
   <main id="main">
-    <section class="boot" id="home" aria-labelledby="boot-title">
-      <div class="boot-log" aria-hidden="true"><p>FIELD SYSTEMS CONSOLE // BOOTING...</p><p>UAV &amp; FLIGHT SYSTEMS MODULE .......... <b>READY</b></p><p>ROBOTICS &amp; AUTONOMY INDEX ............ <b>READY</b></p><p>STATION: MORATUWA / LK</p></div>
-      <div class="boot-grid">
-        <div class="boot-copy">
-          <p class="prompt">operator@fieldnet:~$ identify</p>
-          <h1 id="boot-title">JAYAMADU<br><span>GAMMUNE</span></h1>
-          <p class="role">Robotics &amp; UAV Systems Engineer <i>//</i> Autonomous Machines</p>
-          <p class="intro">I build machines that sense the world, reason under uncertainty, and act safely in it—from embedded flight controllers to autonomous robots.</p>
-          <div class="command-line"><span class="prompt">$</span><span id="command-output">open --selected-work</span><span class="cursor" aria-hidden="true"></span></div>
-          <div class="actions"><a href="#work">[ENTER] VIEW WORK</a><a href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">[C] OPEN CV</a></div>
-        </div>
-        <div class="diagnostic">
-          <div class="diag-head"><span>SYS_DIAGNOSTIC</span><span>LIVE</span></div>
-          <div class="terminal-graphic"><img class="terminal-photo" src="img/IMG_2690NEW.png" alt="Jayamadu Gammune in a suit" width="960" height="960"></div>
-          <div class="diag-data"><span>CPU / RESEARCH</span><b>████████░░ 82%</b><span>MEM / PROJECTS</span><b>███████░░░ 71%</b><span>STATUS</span><b class="online">● AVAILABLE FOR RESEARCH</b></div>
-        </div>
-      </div>
-      <div class="status-bar"><span>SESSION: 2026.10.07</span><span>SCROLL TO EXECUTE</span><span>↑↓ NAVIGATE</span></div>
-    </section>
+    <!-- ============ OVERVIEW ============ -->
+    <section class="container overview" aria-label="Overview">
+      <div class="grid">
+        <article class="card hero span-8 reveal" data-magnet>
+          <div class="hero-copy">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span> Robotics &amp; Autonomous Systems</p>
+            <h1>Jayamadu<br>Gammune</h1>
+            <p class="hero-lead">I build machines that sense the world, reason under uncertainty, and act safely in it, from embedded flight controllers to autonomous robots.</p>
+            <div class="btn-row">
+              <a class="pill-btn accent" href="projects.html">View selected work <i class="iconoir-arrow-right" aria-hidden="true"></i></a>
+              <a class="pill-btn ghost" href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener"><i class="iconoir-page" aria-hidden="true"></i> Read CV</a>
+            </div>
+          </div>
+          <figure class="hero-photo">
+            <img src="img/IMG_2690NEW.png" alt="Jayamadu Gammune in a suit" width="960" height="960">
+          </figure>
+        </article>
 
-    <section class="section work" id="work" aria-labelledby="work-title">
-      <div class="section-head"><p class="prompt">operator@fieldnet:~$ list --mission-logs</p><h2 id="work-title">MISSION LOGS<span class="cursor"></span></h2><p class="section-desc">A field index spanning UAV systems, perception, control, embedded systems, and robotics.</p></div>
-      <div class="project-list">
-        <article class="project"><div class="project-no">01</div><div class="project-main"><div class="project-meta">VISION / MEDICAL IMAGING / 2025—26</div><h3>GPU-ACCELERATED<br>ROBOTIC ULTRASOUND</h3><p>CUDA-accelerated computer vision for autonomous anatomical landmark detection. Reduced processing latency by 40% while targeting real-time clinical use.</p><div class="tags"><span>CUDA</span><span>OpenCV</span><span>DEEP LEARNING</span></div></div><div class="project-result"><span>RESULT</span><b>−40%</b><small>PROCESSING LATENCY</small><a href="mailto:gammunedjt.21@uom.lk?subject=Robotic%20ultrasound">[CONTACT]</a></div></article>
-        <article class="project"><div class="project-no">02</div><div class="project-main"><div class="project-meta">EMBODIED AI / 2025</div><h3>ROBOBRAIN 2.0</h3><p>An LLM layer for hierarchical task decomposition in robotic manipulation, compressed for constrained deployment hardware.</p><div class="tags"><span>PYTORCH</span><span>VLM</span><span>QUANTIZATION</span></div></div><div class="project-result"><span>STATUS</span><b>EDGE-READY</b><small>CONSTRAINED DEPLOYMENT</small><a href="https://github.com/JayxTG/Robobrain-2.0" target="_blank" rel="noopener">[GITHUB]</a></div></article>
-        <article class="project"><div class="project-no">03</div><div class="project-main"><div class="project-meta">CONTROL / EMBEDDED / 2024</div><h3>MICROMOUSE<br>MOTOR CONTROL</h3><p>STM32 field-oriented control with FloodFill navigation for high-speed autonomous maze traversal.</p><div class="tags"><span>STM32</span><span>FOC</span><span>EMBEDDED C</span></div></div><div class="project-result"><span>STACK</span><b>FOC</b><small>MOTOR CONTROL</small><a href="https://github.com/JayxTG/SLRC-2024" target="_blank" rel="noopener">[GITHUB]</a></div></article>
-        <article class="project"><div class="project-no">04</div><div class="project-main"><div class="project-meta">NEUROTECH / ASSISTIVE ROBOTICS / 2024</div><h3>PEDIATRIC EEG—BCI</h3><p>A low-noise signal chain and real-time EEG interface exploring assistive robotic control for children with motor impairments.</p><div class="tags"><span>EEG</span><span>PCB DESIGN</span><span>SIGNAL PROCESSING</span></div></div><div class="project-result"><span>STATUS</span><b>REAL-TIME</b><small>EEG CONTROL INTERFACE</small><a href="mailto:gammunedjt.21@uom.lk?subject=Pediatric%20EEG%20BCI">[CONTACT]</a></div></article>
-      </div>
-      <a class="more" href="https://github.com/JayxTG?tab=repositories" target="_blank" rel="noopener">[EXECUTE] BROWSE FULL REPOSITORY INDEX →</a>
-    </section>
+        <aside class="card status span-4 reveal" data-magnet aria-label="Status">
+          <div class="status-list">
+            <div class="status-item"><span class="app-icon i-green"><i class="iconoir-check-circle" aria-hidden="true"></i></span><div><small>Status</small><b>Available for research</b></div></div>
+            <div class="status-item"><span class="app-icon i-blue"><i class="iconoir-map-pin" aria-hidden="true"></i></span><div><small>Based in</small><b>Moratuwa, Sri Lanka</b></div></div>
+            <div class="status-item"><span class="app-icon i-orange"><i class="iconoir-clock" aria-hidden="true"></i></span><div><small>Local time</small><b class="local-time">—</b></div></div>
+            <div class="status-item"><span class="app-icon i-purple"><i class="iconoir-drone" aria-hidden="true"></i></span><div><small>Current focus</small><b>UAV autonomy &amp; perception</b></div></div>
+          </div>
+          <div class="status-social">
+            <a class="round-btn" href="https://github.com/JayxTG" target="_blank" rel="noopener" aria-label="GitHub"><i class="iconoir-github" aria-hidden="true"></i></a>
+            <a class="round-btn" href="https://www.linkedin.com/in/jayamadu-gammune-66a679271/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="iconoir-linkedin" aria-hidden="true"></i></a>
+            <a class="round-btn" href="mailto:gammunedjt.21@uom.lk" aria-label="Email"><i class="iconoir-mail" aria-hidden="true"></i></a>
+          </div>
+        </aside>
 
-    <section class="section research" id="research" aria-labelledby="research-title">
-      <div class="section-head"><p class="prompt">operator@fieldnet:~$ read research_direction.txt</p><h2 id="research-title">RESEARCH_DIRECTION<span class="cursor"></span></h2></div>
-      <div class="research-grid"><div><p class="big-copy">I am now focused on UAVs and robotics that can navigate, perceive, and act reliably outside the lab.</p><p>My work combines flight dynamics, embedded electronics, control, and perception systems that learn from changing environments instead of assuming they are clean.</p></div><div class="terminal-list"><div><span>01</span><b>UAV AUTONOMY</b><small>Flight control, navigation, mission planning</small></div><div><span>02</span><b>ROBOT PERCEPTION</b><small>Visual odometry, tracking, mapping, sensing</small></div><div><span>03</span><b>EMBEDDED CONTROL</b><small>STM32, FOC, sensor fusion, real-time systems</small></div><div><span>04</span><b>LEARNING-BASED ROBOTICS</b><small>Manipulation, planning, safe interaction</small></div></div></div>
-    </section>
+        <a class="card tile span-4 reveal" href="projects.html" data-magnet>
+          <img class="illus" src="img/illustrations/drone.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>Selected work</h4><h3>Projects</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
+        <a class="card tile span-4 reveal" href="research.html" data-magnet>
+          <img class="illus" src="img/illustrations/research.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>Direction</h4><h3>Research</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
+        <a class="card tile span-4 reveal" href="experience.html" data-magnet>
+          <img class="illus" src="img/illustrations/experience.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>Labs &amp; teaching</h4><h3>Experience</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
+        <a class="card tile span-4 reveal" href="experience.html" data-magnet>
+          <img class="illus" src="img/illustrations/certificate.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>Professional development</h4><h3>Certifications</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
+        <a class="card tile span-4 reveal" href="about.html" data-magnet>
+          <img class="illus" src="img/illustrations/education.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>University of Moratuwa</h4><h3>About me</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
+        <a class="card tile span-4 reveal" href="life.html" data-magnet>
+          <img class="illus" src="img/illustrations/camera.svg" alt="" width="260" height="222">
+          <div class="tile-foot"><div class="infos"><h4>Outside the lab</h4><h3>Life</h3></div><span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span></div>
+        </a>
 
-    <section class="section about" id="about" aria-labelledby="about-title">
-      <div class="section-head"><p class="prompt">operator@fieldnet:~$ inspect --operator</p><h2 id="about-title">ABOUT_THE<br>ENGINEER<span class="cursor"></span></h2></div>
-      <div class="about-grid"><div>      <p class="big-copy">I’m pursuing a B.Sc. Engineering (Honours) in Biomedical Engineering through the Department of Electronic &amp; Telecommunication Engineering at the University of Moratuwa, focusing on Robotics &amp; Automation.</p><p>Alongside my degree, I focus on UAVs, robotics, embedded systems, and autonomous machines—and teach electronic circuits while building the hardware and software between an idea and a working machine.</p><div class="about-actions"><a href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">[OPEN_CV]</a><a href="https://www.linkedin.com/in/jayamadu-gammune-66a679271/" target="_blank" rel="noopener">[LINKEDIN]</a></div></div><div class="readout"><div><span>GPA / SEM 07</span><b>3.77</b></div><div><span>IELTS ACADEMIC</span><b>7.5</b></div><div><span>PROJECTS INDEXED</span><b>28+</b></div><div><span>FOCUS AREA</span><b>UAV + ROBOTICS</b></div></div></div>
-    </section>
-
-    <section class="section records" id="experience" aria-labelledby="experience-title">
-      <div class="section-head"><p class="prompt">operator@fieldnet:~$ read --service-record</p><h2 id="experience-title">SERVICE_RECORD<span class="cursor"></span></h2></div>
-      <div class="record-list">
-        <article class="record"><div class="record-index">01</div><div><h3>INTERN RESEARCH AFFILIATE</h3><p class="record-org">Intelligent Robotics Laboratory, Swinburne University of Technology, Australia</p><p class="record-meta">Advisor: Assoc. Prof. Mats Isaksson</p><ul><li>Developed GPU-accelerated computer vision algorithms for autonomous robotic ultrasound imaging.</li><li>Achieved a 40% reduction in processing latency for real-time anatomical landmark detection.</li><li>Balanced precision with real-time performance for systems targeted at clinical use.</li></ul><div class="tags"><span>CUDA</span><span>COMPUTER VISION</span><span>ROBOTICS</span></div></div></article>
-        <article class="record"><div class="record-index">02</div><div><h3>LABORATORY INSTRUCTOR</h3><p class="record-org">Department of Electronic &amp; Telecommunication Engineering, University of Moratuwa</p><ul><li>Instructed laboratory sessions in embedded systems, electronic circuits, and robotics applications.</li><li>Provided hands-on guidance in hardware integration and system design.</li></ul><div class="tags"><span>EMBEDDED SYSTEMS</span><span>ELECTRONICS</span><span>ROBOTICS</span></div></div></article>
-      </div>
-      <div class="subrecord-head"><p class="prompt">operator@fieldnet:~$ list --qualifications</p><h2 class="subrecord-title">CERTIFICATIONS &amp;<br>PROFESSIONAL DEVELOPMENT<span class="cursor"></span></h2></div>
-      <div class="cert-list"><div><b>DEEP LEARNING FOR COMPUTER VISION</b><span>MathWorks · 3 courses</span></div><div><b>FIELD-ORIENTED CONTROL IMPLEMENTATION</b><span>Texas Instruments</span></div><div><b>MACHINE LEARNING SPECIALISATION</b><span>Stanford University &amp; DeepLearning.AI</span></div><div><b>HIGH-PERFORMANCE C++ DEVELOPMENT</b><span>LSEG</span></div></div>
-    </section>
-
-    <section class="section beyond" id="beyond" aria-labelledby="beyond-title">
-      <div class="section-head"><p class="prompt">operator@fieldnet:~$ read --personal-log</p><h2 id="beyond-title">BEYOND_THE<br>LAB<span class="cursor"></span></h2><p class="section-desc">Engineering is my work. Curiosity, sport, and community are my life beyond the lab.</p></div>
-      <div class="life-carousel" aria-roledescription="carousel" aria-label="Personal field notes">
-        <div class="life-viewport">
-          <figure class="life-slide is-active" aria-roledescription="slide" aria-label="Field note photo 1 of 10">
-            <img src="img/Hobbies/534514286_1322522366062293_616238214845459639_n.jpg" alt="Personal field note photo 1" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 2 of 10" aria-hidden="true">
-            <img src="img/Hobbies/485906047_1211075780540286_4470222092246140186_n.jpg" alt="Personal field note photo 2" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 3 of 10" aria-hidden="true">
-            <img src="img/Hobbies/518835488_1292292699085260_6100094464328917738_n.jpg" alt="Personal field note photo 3" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 4 of 10" aria-hidden="true">
-            <img src="img/Hobbies/492111513_1233944178253446_4736638723458025620_n.jpg" alt="Personal field note photo 4" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 5 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Image%202026-01-01%20at%203.18.32%20PM.jpeg" alt="Personal field note photo 5" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 6 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Image%202026-01-01%20at%203.18.39%20PghM.jpeg" alt="Personal field note photo 6" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 7 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Image%202026-01-01%20at%203.18.40%20PM.jpeg" alt="Personal field note photo 7" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 8 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Image%202026-01-01%20at%203.18fg.39%20PM.jpeg" alt="Personal field note photo 8" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 9 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Image%202026-01-01%20at%203.30.57%20PM.jpeg" alt="Personal field note photo 9" loading="eager">
-          </figure>
-          <figure class="life-slide" aria-roledescription="slide" aria-label="Field note photo 10 of 10" aria-hidden="true">
-            <img src="img/Hobbies/WhatsApp%20Imagevhjv%202026-01-01%20at%203.18.41%20PM.jpeg" alt="Personal field note photo 10" loading="eager">
-          </figure>
-          <figcaption class="life-caption"><span>FIELD NOTE 01 / OUTDOORS</span><b>SPACE TO THINK</b><small>Time away from the workbench keeps curiosity moving.</small></figcaption>
-        </div>
-        <div class="life-controls">
-          <button class="life-prev" type="button" aria-label="Previous field note">[← PREV]</button>
-          <div class="life-dots" role="tablist" aria-label="Choose a field note"><button class="is-active" type="button" role="tab" aria-selected="true" aria-label="Show field note 1"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 2"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 3"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 4"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 5"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 6"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 7"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 8"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 9"></button><button type="button" role="tab" aria-selected="false" aria-label="Show field note 10"></button></div>
-          <button class="life-next" type="button" aria-label="Next field note">[NEXT →]</button>
+        <div class="card strip reveal" data-magnet>
+          <div class="strip-item"><b>3.77</b><span>GPA · Semester 07</span></div>
+          <div class="strip-item"><b>7.5</b><span>IELTS Academic</span></div>
+          <div class="strip-item"><b>28+</b><span>Projects indexed</span></div>
+          <div class="strip-item"><b>−40%</b><span>Latency, robotic ultrasound</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section contact" id="contact" aria-labelledby="contact-title"><p class="prompt">operator@fieldnet:~$ mail --compose</p><h2 id="contact-title">READY_TO<br>CONNECT?<span class="cursor"></span></h2><p>Open to UAV and robotics research collaborations, graduate opportunities, and engineering work where the system has to leave the screen.</p><a class="email" href="mailto:gammunedjt.21@uom.lk">gammunedjt.21@uom.lk <span>→</span></a><div class="contact-links"><a href="https://github.com/JayxTG" target="_blank" rel="noopener">[GITHUB]</a><a href="https://www.linkedin.com/in/jayamadu-gammune-66a679271/" target="_blank" rel="noopener">[LINKEDIN]</a><a href="docs/Jayamadu_Gammune_New_CV_Research.pdf" target="_blank" rel="noopener">[CV]</a></div></section>
+    <section class="container cta-wrap" aria-label="Contact">
+      <a class="card cta reveal" href="contact.html" data-magnet>
+        <span class="app-icon i-blue"><i class="iconoir-send-diagonal" aria-hidden="true"></i></span>
+        <div><h2>Have a robot that needs to leave the lab?</h2><p>Research collaborations, graduate opportunities, engineering work.</p></div>
+        <span class="go" aria-hidden="true"><i class="iconoir-arrow-up-right"></i></span>
+      </a>
+    </section>
   </main>
-  <footer><span>JG_OS // END_OF_SESSION</span><span>© 2026 JAYAMADU GAMMUNE</span><a href="#top">[BACK_TO_TOP ↑]</a></footer>
+
+  <footer class="container footer">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="index.html"><span class="brand-mark">JG</span><span class="brand-name">Jayamadu Gammune</span></a>
+        <p class="footer-tag">Robotics &amp; UAV Systems Engineer · Moratuwa, Sri Lanka</p>
+      </div>
+      <nav class="footer-menu" aria-label="Footer">
+        <a href="index.html">Home</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="experience.html">Experience</a><a href="about.html">About</a><a href="life.html">Life</a><a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a class="round-btn" href="https://github.com/JayxTG" target="_blank" rel="noopener" aria-label="GitHub"><i class="iconoir-github" aria-hidden="true"></i></a>
+        <a class="round-btn" href="https://www.linkedin.com/in/jayamadu-gammune-66a679271/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="iconoir-linkedin" aria-hidden="true"></i></a>
+        <a class="round-btn" href="mailto:gammunedjt.21@uom.lk" aria-label="Email"><i class="iconoir-mail" aria-hidden="true"></i></a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Jayamadu Gammune</span>
+      <a href="#top">Back to top <i class="iconoir-arrow-up" aria-hidden="true"></i></a>
+    </div>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
