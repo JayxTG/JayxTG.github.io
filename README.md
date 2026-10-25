@@ -43,6 +43,7 @@ Visit: [https://jayxtg.github.io](https://jayxtg.github.io)
 **Jayamadu Gammune**
 - GitHub: [@JayxTG](https://github.com/JayxTG)
 - LinkedIn: [jayamadu-gammune](https://www.linkedin.com/in/jayamadu-gammune-66a679271/)
+- Google Scholar: [Jayamadu Gammune](https://scholar.google.com/citations?user=RvP3TDsAAAAJ&hl=en)
 - Email: gammunedjt.21@uom.lk
 
 ---

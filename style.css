@@ -202,6 +202,7 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
 .grid .span-5 { grid-column: span 5; }
 .grid .span-7 { grid-column: span 7; }
 .grid .span-8 { grid-column: span 8; }
+.grid .span-6 { grid-column: span 6; }
 .grid.two > * { grid-column: span 6; }
 .grid.four > * { grid-column: span 3; }
 
@@ -421,7 +422,7 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
   .page-hero-art { order: -1; justify-self: center; max-width: 280px; margin: -16px 0 -18px; }
   .pager { padding-top: 72px; }
   .pager-card img { width: 84px; }
-  .grid .span-4.method { grid-column: span 12; }
+  .grid .span-4.method, .grid .span-6.method { grid-column: span 12; }
   .contact-grid .method { min-height: 0; flex-direction: row !important; align-items: center; }
   .contact-grid .method .infos { margin-top: 0; }
   .contact-grid .method .go { position: static; margin-left: auto; }

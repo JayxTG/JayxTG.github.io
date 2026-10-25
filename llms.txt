@@ -1,6 +1,6 @@
 # Jayamadu Gammune — Robotics & Autonomous Systems Engineer
 
-> Biomedical Engineering graduate (Robotics & Automation) at the University of Moratuwa, Sri Lanka. Researcher in autonomous robotic systems, computer vision, GPU-accelerated medical imaging, learning-based control, and embedded systems. Open to PhD and research positions from Fall 2027.
+> Biomedical Engineering graduate (Robotics & Automation, First Class Honours, 2026) from the University of Moratuwa, Sri Lanka. Researcher in autonomous robotic systems, computer vision, GPU-accelerated medical imaging, learning-based control, and embedded systems. Open to PhD and research positions from Fall 2027.
 
 ## About
 
@@ -17,28 +17,41 @@ Jayamadu Gammune is a Biomedical Engineering graduate from the University of Mor
 
 ## Key Projects
 
-- **RoboBrain 2.0**: Augmented CVPR 2025 baseline with LLM layer; 50% memory reduction via 8-bit quantization
-- **GPU-Accelerated Robotic Ultrasound**: CUDA pipeline achieving 40% latency reduction in lumbar spine landmark detection
-- **Pediatric EEG-Based BCI**: 5-DOF robotic arm controlled via real-time EEG and custom low-noise PCBs
-- **Autonomous Micromouse**: STM32-based FloodFill maze-solving robot with FOC motor control
+- **RoboBrain 2.0 Extension (2026)**: Extended the CVPR 2025 baseline with an LLM planning layer; 50% memory reduction via 8-bit quantization
+- **GPU-Accelerated Robotic Ultrasound (2024–2025, Swinburne)**: Hybrid CPU–GPU point-cloud pipeline achieving a 27% latency reduction; published at MERCon 2026
+- **Paediatric EEG-Based BCI (2026)**: SSVEP brain-computer interface with custom low-noise PCBs for a child with locked-in syndrome
+- **Survey Drone (ongoing)**: ArduPilot/Pixhawk platform for automated aerial image capture and map reconstruction
+- **Autonomous Micromouse (2025)**: STM32-based FloodFill maze-solving robot with custom motor drivers
 - **SLRC 2024 Robot**: National robotics competition autonomous mobile robot
 
 ## Education
 
-- B.Sc. Engineering (Honours), Biomedical Engineering — Robotics & Automation, University of Moratuwa, Sri Lanka
+- B.Sc. Engineering (Honours), Biomedical Engineering — Robotics & Automation, University of Moratuwa, Sri Lanka, 2022–2026. First Class Honours, GPA 3.77/4.00.
+
+## Experience
+
+- Intern Research Affiliate, Intelligent Robotics Laboratory, Swinburne University of Technology (2024–2025)
+- Visiting Instructor, Dept. of Electronic & Telecommunication Engineering, University of Moratuwa (Sep–Nov 2025: EN 2091)
+- Visiting Instructor (Teaching Assistant), same department (Jun–Oct 2026: EN 3563, EN 4594, EN 2091)
+
+## Publications
+
+- D.J.T. Gammune, M.C. Roshan, and M. Isaksson, "Systematic GPU Acceleration for Autonomous Robotic Ultrasound Imaging via Point Cloud Pipeline Optimization," Proc. MERCon 2026. doi:10.1109/MERCon71835.2026.11691436
+- D.J.T. Gammune et al., "Development of a Child-Friendly Non-Invasive Brain-Computer Interface for Paediatric Locked-in Syndrome," Proc. 19th Asia Pacific Congress of Paediatrics (APCP 2026), Colombo, Jul. 2026. [Abstract]
 
 ## Contact
 
 - Email: gammunedjt.21@uom.lk
 - GitHub: https://github.com/JayxTG
 - LinkedIn: https://www.linkedin.com/in/jayamadu-gammune-66a679271/
+- Google Scholar: https://scholar.google.com/citations?user=RvP3TDsAAAAJ&hl=en
 - Portfolio: https://jayxtg.github.io/
 
 ## Pages
 
 - Home: https://jayxtg.github.io/
 - Projects: https://jayxtg.github.io/projects.html
-- Research: https://jayxtg.github.io/research.html
+- Research & publications: https://jayxtg.github.io/research.html
 - Experience & certifications: https://jayxtg.github.io/experience.html
 - About & education: https://jayxtg.github.io/about.html
 - Life beyond work: https://jayxtg.github.io/life.html
