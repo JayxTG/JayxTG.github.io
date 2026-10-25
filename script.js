@@ -129,6 +129,22 @@
   /* ---------- Carousels: 1:1 drag, momentum projection, interruptible springs ---------- */
   document.querySelectorAll('.life').forEach(setupCarousel);
 
+  /* ---------- Photo collage: open a photo full size ---------- */
+  const lightbox = document.querySelector('.lightbox');
+  if (lightbox) {
+    const full = lightbox.querySelector('img');
+    document.querySelectorAll('.collage-item').forEach((item) => {
+      item.addEventListener('click', () => {
+        const img = item.querySelector('img');
+        full.src = img.src;
+        full.alt = img.alt;
+        lightbox.showModal();
+      });
+    });
+    lightbox.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+    lightbox.addEventListener('click', (e) => { if (e.target === lightbox) lightbox.close(); });
+  }
+
   function setupCarousel(carousel) {
   const auto = carousel.hasAttribute('data-auto');
   const viewport = carousel.querySelector('.life-viewport');

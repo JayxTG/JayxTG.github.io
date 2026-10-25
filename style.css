@@ -322,6 +322,20 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
 }
 .life-controls { display: flex; align-items: center; gap: 8px; }
 
+/* ---------- Photo collage (Life) ---------- */
+.collage { columns: 3; column-gap: var(--gap); }
+.collage-item {
+  display: block; width: 100%; margin: 0 0 var(--gap); padding: 0; border: 0; break-inside: avoid;
+  border-radius: var(--radius-inner); overflow: hidden; background: #000; cursor: zoom-in;
+}
+.collage-item img { display: block; width: 100%; height: auto; transition: transform .5s cubic-bezier(.2, .8, .2, 1); }
+.collage-item:hover img { transform: scale(1.04); }
+.collage-item:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.lightbox { margin: auto; padding: 0; border: 0; background: transparent; max-width: 94vw; max-height: 94vh; overflow: visible; }
+.lightbox::backdrop { background: rgba(0, 0, 0, .86); }
+.lightbox img { display: block; max-width: 94vw; max-height: 94vh; border-radius: var(--radius-inner); }
+.lightbox-close { position: absolute; top: 12px; right: 12px; }
+
 /* Project cards with an image strip: media left, write-up right */
 .features { display: grid; gap: var(--gap); margin-bottom: var(--gap); }
 .project.feature { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 0; padding: 12px; }
@@ -451,6 +465,7 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
   .grid.four > * { grid-column: span 6; }
 }
 @media (max-width: 860px) {
+  .collage { columns: 2; }
   .nav, .header-cv { display: none; }
   .brand-name { display: inline; }
   .menu-btn { display: block; }
@@ -469,6 +484,8 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
   .section { padding-top: 96px; }
 }
 @media (max-width: 640px) {
+  .collage { column-gap: 10px; }
+  .collage-item { margin-bottom: 10px; border-radius: 14px; }
   :root { --gap: 14px; --radius: 24px; }
   .grid .span-4.tile { grid-column: span 6; }
   .tile { padding: 8px 8px 14px; }
@@ -507,6 +524,7 @@ html:not(.magnet) a.card:active { transform: scale(.985); }
   .js-ready .reveal { translate: none; }
   .tile:hover .illus { transform: none; }
   .card:hover .go { transform: none; }
+  .collage-item:hover img { transform: none; }
 }
 @media (prefers-reduced-transparency: reduce) {
   .site-header, .mobile-nav { background: var(--bg); -webkit-backdrop-filter: none; backdrop-filter: none; }
