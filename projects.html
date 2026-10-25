@@ -50,6 +50,103 @@
     </section>
 
     <section class="container page-body" aria-label="Projects">
+      <div class="features">
+        <article class="card project feature reveal" data-magnet>
+          <div class="life media" aria-roledescription="carousel" aria-label="RoboBrain 2.0 images" tabindex="0">
+            <div class="life-viewport">
+              <div class="life-track">
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/02-final-results.webp" alt="Final results: language prompts executed on a real robot arm" draggable="false"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/03-architecture.webp" alt="Base model: Qwen2.5-VL with planning, affordance and trajectory outputs" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/04-extensions.webp" alt="Extensions: multi-turn memory and an agentic LLM layer around the base model" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/05-decomposition.webp" alt="A complex instruction split into grounding, affordance and trajectory steps" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/06-planning-compare.webp" alt="Pointing results without and with the planning extension" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/07-improvements.webp" alt="Grounding and trajectory output before and after the improvements" draggable="false" loading="lazy"></figure>
+              </div>
+              <div class="life-hud">
+                <p class="life-caption"></p>
+                <div class="life-controls">
+                  <span class="life-count" aria-live="polite">01 / 06</span>
+                  <button class="round-btn glass life-prev" type="button" aria-label="Previous image"><i class="iconoir-nav-arrow-left" aria-hidden="true"></i></button>
+                  <button class="round-btn glass life-next" type="button" aria-label="Next image"><i class="iconoir-nav-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top"><span class="app-icon i-purple"><i class="iconoir-brain" aria-hidden="true"></i></span><span class="meta">Embodied AI · 2025</span></div>
+            <h3>RoboBrain 2.0</h3>
+            <p>Extended the RoboBrain 2.0 vision-language model with multi-turn memory and an agentic LLM planning layer. A complex instruction is split into grounding, affordance and trajectory steps, and 8-bit quantization halves GPU memory for constrained hardware.</p>
+            <div class="project-foot"><div class="result"><b>−50%</b><span>GPU memory, 8-bit</span></div><div class="tags"><span>PyTorch</span><span>Qwen2.5-VL</span><span>Quantization</span></div></div>
+            <a class="go" href="https://github.com/JayxTG/Robobrain-2.0" target="_blank" rel="noopener" aria-label="Open RoboBrain 2.0 on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="card project feature reveal" data-magnet>
+          <div class="life media" aria-roledescription="carousel" aria-label="Pediatric EEG–BCI images" tabindex="0">
+            <div class="life-viewport">
+              <div class="life-track">
+                <figure class="life-slide"><img src="img/projects/bci/01-headset.webp" alt="Final headset: ventilator-compatible, with three occipital electrodes" draggable="false"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/bci/02-headset-annotated.webp" alt="Headset layout: analog front end, adjustable electrodes, right-leg drive" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/bci/03-system.webp" alt="Full system test: SSVEP stimulus, headset and live signal view" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/bci/04-afe-pcb.webp" alt="Custom analog front end built around the TI ADS1299" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/bci/05-active-electrode.webp" alt="3D-printed active electrode holder with on-board buffer" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/bci/06-architecture.webp" alt="SSVEP pipeline: stimulus, front-end hardware, processing and controller" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/bci/07-ssvep-fft.webp" alt="Clear SSVEP peaks at each stimulus frequency and its harmonic" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/bci/08-accuracy.webp" alt="Accuracy by window length, FBCCA vs TMSI: 82.1% at 3 s" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-screen"><img src="img/projects/bci/09-image-selector.webp" alt="Image selector: the child picks between two flickering pictures" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-screen"><img src="img/projects/bci/10-maze-game.webp" alt="Maze game steered with SSVEP commands" draggable="false" loading="lazy"></figure>
+              </div>
+              <div class="life-hud">
+                <p class="life-caption"></p>
+                <div class="life-controls">
+                  <span class="life-count" aria-live="polite">01 / 10</span>
+                  <button class="round-btn glass life-prev" type="button" aria-label="Previous image"><i class="iconoir-nav-arrow-left" aria-hidden="true"></i></button>
+                  <button class="round-btn glass life-next" type="button" aria-label="Next image"><i class="iconoir-nav-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top"><span class="app-icon i-orange"><i class="iconoir-antenna-signal" aria-hidden="true"></i></span><span class="meta">Neurotech · Final-year project · 2025–26</span></div>
+            <h3>Pediatric EEG–BCI</h3>
+            <p>An SSVEP brain–computer interface for a child with locked-in syndrome. A ventilator-compatible headset, a custom ADS1299 front end with active electrodes, and FBCCA and TMSI decoding drive an image selector and a maze game.</p>
+            <div class="project-foot"><div class="result"><b>82%</b><span>Accuracy, 3 s window</span></div><div class="tags"><span>EEG</span><span>PCB Design</span><span>Signal Processing</span></div></div>
+            <a class="go" href="https://github.com/fyp21-bci" target="_blank" rel="noopener" aria-label="Open the BCI project on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="card project feature reveal" data-magnet>
+          <div class="life media" aria-roledescription="carousel" aria-label="Pick-and-place robot images" tabindex="0">
+            <div class="life-viewport">
+              <div class="life-track">
+                <figure class="life-slide is-figure"><img src="img/projects/pick-and-place/01-assembly-cad.webp" alt="Full SolidWorks assembly: gantry, vertical axis, gripper and controller" draggable="false"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/02-integration.webp" alt="Mechanical integration in the lab" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/pick-and-place/03-gripper-cad.webp" alt="Gripper design with gear-coupled fingers" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/04-gripper-parts.webp" alt="3D-printed gripper parts" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/05-conveyor.webp" alt="Single-axis conveyor driven by a NEMA 17 stepper" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/06-pcb.webp" alt="Assembled controller PCB" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/pick-and-place/07-pcb-layout.webp" alt="Controller PCB layout, 66 × 77 mm" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/08-enclosure.webp" alt="Printed controller enclosure" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide"><img src="img/projects/pick-and-place/09-sketch.webp" alt="Early concept sketch of the arm" draggable="false" loading="lazy"></figure>
+              </div>
+              <div class="life-hud">
+                <p class="life-caption"></p>
+                <div class="life-controls">
+                  <span class="life-count" aria-live="polite">01 / 09</span>
+                  <button class="round-btn glass life-prev" type="button" aria-label="Previous image"><i class="iconoir-nav-arrow-left" aria-hidden="true"></i></button>
+                  <button class="round-btn glass life-next" type="button" aria-label="Next image"><i class="iconoir-nav-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top"><span class="app-icon i-red"><i class="iconoir-wrench" aria-hidden="true"></i></span><span class="meta">Robotics · Mechatronics · 2024</span></div>
+            <h3>Pick-and-Place Assembly Robot</h3>
+            <p>A gantry robot that places rivets, washers and transistors onto cylindrical heat sinks for a 3-phase H-bridge. Horizontal and vertical conveyors, a custom gripper and an in-house controller PCB, with an OpenCV tool that centres the gripper over each hole.</p>
+            <p class="repo-links"><a href="https://github.com/Pick-and-Place-Robot/Hole-Centering-Tool" target="_blank" rel="noopener">Hole-Centering Tool <i class="iconoir-arrow-up-right" aria-hidden="true"></i></a></p>
+            <div class="project-foot"><div class="result"><b>NEMA 17</b><span>Stepper-driven axes</span></div><div class="tags"><span>SolidWorks</span><span>PCB Design</span><span>OpenCV</span></div></div>
+            <a class="go" href="https://github.com/Pick-and-Place-Robot/Assembling-Part" target="_blank" rel="noopener" aria-label="Open the pick-and-place robot on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+      </div>
       <div class="grid two">
         <article class="card project reveal" data-magnet>
           <div class="project-top"><span class="app-icon i-blue"><i class="iconoir-eye" aria-hidden="true"></i></span><span class="meta">Vision · Medical Imaging · 2025–26</span></div>
@@ -59,25 +156,11 @@
           <a class="go" href="mailto:gammunedjt.21@uom.lk?subject=Robotic%20ultrasound" aria-label="Contact about robotic ultrasound"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
         </article>
         <article class="card project reveal" data-magnet>
-          <div class="project-top"><span class="app-icon i-purple"><i class="iconoir-brain" aria-hidden="true"></i></span><span class="meta">Embodied AI · 2025</span></div>
-          <h3>RoboBrain 2.0</h3>
-          <p>An LLM layer for hierarchical task decomposition in robotic manipulation, compressed for constrained deployment hardware.</p>
-          <div class="project-foot"><div class="result"><b>Edge-ready</b><span>Constrained deployment</span></div><div class="tags"><span>PyTorch</span><span>VLM</span><span>Quantization</span></div></div>
-          <a class="go" href="https://github.com/JayxTG/Robobrain-2.0" target="_blank" rel="noopener" aria-label="Open RoboBrain on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
-        </article>
-        <article class="card project reveal" data-magnet>
           <div class="project-top"><span class="app-icon i-green"><i class="iconoir-electronics-chip" aria-hidden="true"></i></span><span class="meta">Control · Embedded · 2024</span></div>
           <h3>Micromouse Motor Control</h3>
           <p>STM32 field-oriented control with FloodFill navigation for high-speed autonomous maze traversal.</p>
           <div class="project-foot"><div class="result"><b>FOC</b><span>Motor control</span></div><div class="tags"><span>STM32</span><span>FOC</span><span>Embedded C</span></div></div>
           <a class="go" href="https://github.com/JayxTG/SLRC-2024" target="_blank" rel="noopener" aria-label="Open micromouse on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
-        </article>
-        <article class="card project reveal" data-magnet>
-          <div class="project-top"><span class="app-icon i-orange"><i class="iconoir-antenna-signal" aria-hidden="true"></i></span><span class="meta">Neurotech · Assistive Robotics · 2024</span></div>
-          <h3>Pediatric EEG–BCI</h3>
-          <p>A low-noise signal chain and real-time EEG interface exploring assistive robotic control for children with motor impairments.</p>
-          <div class="project-foot"><div class="result"><b>Real-time</b><span>EEG control interface</span></div><div class="tags"><span>EEG</span><span>PCB Design</span><span>Signal Processing</span></div></div>
-          <a class="go" href="mailto:gammunedjt.21@uom.lk?subject=Pediatric%20EEG%20BCI" aria-label="Contact about pediatric EEG BCI"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
         </article>
       </div>
       <div class="more reveal"><a class="pill-btn ghost" href="https://github.com/JayxTG?tab=repositories" target="_blank" rel="noopener"><i class="iconoir-github" aria-hidden="true"></i> Browse the full repository</a></div>

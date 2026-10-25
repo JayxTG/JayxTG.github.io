@@ -126,13 +126,16 @@
     window.addEventListener('pointerup', () => { if (pressed) { pressed = null; kick(); } });
   }
 
-  /* ---------- Carousel: 1:1 drag, momentum projection, interruptible springs ---------- */
-  const carousel = document.querySelector('.life');
-  if (!carousel) return;
+  /* ---------- Carousels: 1:1 drag, momentum projection, interruptible springs ---------- */
+  document.querySelectorAll('.life').forEach(setupCarousel);
+
+  function setupCarousel(carousel) {
+  const auto = carousel.hasAttribute('data-auto');
   const viewport = carousel.querySelector('.life-viewport');
   const track = carousel.querySelector('.life-track');
   const slides = [...track.children];
   const count = carousel.querySelector('.life-count');
+  const caption = carousel.querySelector('.life-caption');
   const last = slides.length - 1;
 
   let width = viewport.clientWidth;
@@ -147,6 +150,9 @@
     index = i;
     count.textContent = `${pad(index + 1)} / ${pad(slides.length)}`;
     slides.forEach((s, n) => s.setAttribute('aria-hidden', String(n !== index)));
+    if (caption) caption.textContent = slides[index].querySelector('img').alt;
+    // Warm the neighbours so a swipe never lands on an empty frame
+    [index - 1, index + 1].forEach((n) => slides[(n + slides.length) % slides.length].querySelector('img').loading = 'eager');
   };
 
   // Apple's spring parameters: damping ratio + response (seconds)
@@ -253,7 +259,7 @@
   let hovering = false;
   function stopAuto() { clearInterval(timer); timer = 0; }
   function startAuto() {
-    if (reduced || hovering || document.hidden || drag) return;
+    if (!auto || reduced || hovering || document.hidden || drag) return;
     stopAuto();
     timer = setInterval(() => goTo(index + 1, { velocity: 0 }), 5000);
   }
@@ -274,4 +280,5 @@
   setIndex(0);
   render();
   startAuto();
+  }
 })();
