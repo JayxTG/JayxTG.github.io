@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>Selected projects | Jayamadu Gammune</title>
-  <meta name="description" content="Projects by Jayamadu Gammune: GPU-accelerated robotic ultrasound, RoboBrain 2.0, micromouse motor control, and a pediatric EEG BCI.">
+  <meta name="description" content="Projects by Jayamadu Gammune: GPU-accelerated robotic ultrasound, a RoboBrain 2.0 extension, a pediatric EEG BCI, and a pick-and-place robot.">
   <link rel="canonical" href="https://jayxtg.github.io/projects.html">
   <meta name="theme-color" content="#0c0c0d">
   <meta property="og:title" content="Selected projects | Jayamadu Gammune">
-  <meta property="og:description" content="Projects by Jayamadu Gammune: GPU-accelerated robotic ultrasound, RoboBrain 2.0, micromouse motor control, and a pediatric EEG BCI.">
+  <meta property="og:description" content="Projects by Jayamadu Gammune: GPU-accelerated robotic ultrasound, a RoboBrain 2.0 extension, a pediatric EEG BCI, and a pick-and-place robot.">
   <meta property="og:url" content="https://jayxtg.github.io/projects.html">
   <meta property="og:image" content="https://jayxtg.github.io/img/IMG_2690NEW.png">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
@@ -52,15 +52,43 @@
     <section class="container page-body" aria-label="Projects">
       <div class="features">
         <article class="card project feature reveal" data-magnet>
-          <div class="life media" aria-roledescription="carousel" aria-label="RoboBrain 2.0 images" tabindex="0">
+          <div class="life media" aria-roledescription="carousel" aria-label="Robotic ultrasound images" tabindex="0">
             <div class="life-viewport">
               <div class="life-track">
-                <figure class="life-slide is-figure"><img src="img/projects/robobrain/02-final-results.webp" alt="Final results: language prompts executed on a real robot arm" draggable="false"></figure>
-                <figure class="life-slide is-figure"><img src="img/projects/robobrain/03-architecture.webp" alt="Base model: Qwen2.5-VL with planning, affordance and trajectory outputs" draggable="false" loading="lazy"></figure>
-                <figure class="life-slide is-figure"><img src="img/projects/robobrain/04-extensions.webp" alt="Extensions: multi-turn memory and an agentic LLM layer around the base model" draggable="false" loading="lazy"></figure>
-                <figure class="life-slide is-figure"><img src="img/projects/robobrain/05-decomposition.webp" alt="A complex instruction split into grounding, affordance and trajectory steps" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/ultrasound/01-platform-cad.webp" alt="Platform design: UR5e cobot, ultrasound probe, RGB-D and thermal cameras" draggable="false"></figure>
+                <figure class="life-slide"><img src="img/projects/ultrasound/02-platform-real.webp" alt="Physical platform used for the experiments" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/ultrasound/03-stage-times.webp" alt="Stage times: FGR up to 32× faster, overall 12.5 s down to 9.1 s" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-screen"><img src="img/projects/ultrasound/04-timing-runs.webp" alt="Profiler output: full pipeline run on CPU vs the hybrid framework" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/ultrasound/05-numpy-vs-cupy.webp" alt="NumPy vs CuPy: the GPU only pays off from about a million elements" draggable="false" loading="lazy"></figure>
+              </div>
+              <div class="life-hud">
+                <p class="life-caption"></p>
+                <div class="life-controls">
+                  <span class="life-count" aria-live="polite">01 / 05</span>
+                  <button class="round-btn glass life-prev" type="button" aria-label="Previous image"><i class="iconoir-nav-arrow-left" aria-hidden="true"></i></button>
+                  <button class="round-btn glass life-next" type="button" aria-label="Next image"><i class="iconoir-nav-arrow-right" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="project-body">
+            <div class="project-top"><span class="app-icon i-blue"><i class="iconoir-eye" aria-hidden="true"></i></span><span class="meta">Medical Robotics · GPU Computing · 2025–26</span></div>
+            <h3>GPU-Accelerated Robotic Ultrasound</h3>
+            <p>A profiling-driven hybrid CPU–GPU framework for the point-cloud pipeline of an autonomous robotic ultrasound system. Parallel stages such as Taubin smoothing and Fast Global Registration run on the GPU, while ICP stays on the CPU, where naive offloading made it slower.</p>
+            <div class="project-foot"><div class="result"><b>−27%</b><span>End-to-end latency, 1.37× speedup</span></div><div class="tags"><span>CUDA</span><span>Open3D</span><span>PyTorch3D</span><span>CuPy</span></div></div>
+            <a class="go" href="mailto:gammunedjt.21@uom.lk?subject=Robotic%20ultrasound" aria-label="Contact about robotic ultrasound"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </article>
+        <article class="card project feature reveal" data-magnet>
+          <div class="life media" aria-roledescription="carousel" aria-label="RoboBrain 2.0 Extension images" tabindex="0">
+            <div class="life-viewport">
+              <div class="life-track">
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/05-decomposition.webp" alt="A complex instruction split into grounding, affordance and trajectory steps" draggable="false"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/02-final-results.webp" alt="Final results: language prompts executed on a real robot arm" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/04-extensions.webp" alt="Extensions: multi-turn memory and an agentic LLM layer around RoboBrain 2.0" draggable="false" loading="lazy"></figure>
                 <figure class="life-slide is-figure"><img src="img/projects/robobrain/06-planning-compare.webp" alt="Pointing results without and with the planning extension" draggable="false" loading="lazy"></figure>
-                <figure class="life-slide is-figure"><img src="img/projects/robobrain/07-improvements.webp" alt="Grounding and trajectory output before and after the improvements" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/07-improvements.webp" alt="Suitcase task: grounding and trajectory before and after the extension" draggable="false" loading="lazy"></figure>
+                <figure class="life-slide is-figure"><img src="img/projects/robobrain/08-improvements-basket.webp" alt="Basket task: grounding and trajectory before and after the extension" draggable="false" loading="lazy"></figure>
               </div>
               <div class="life-hud">
                 <p class="life-caption"></p>
@@ -74,10 +102,10 @@
           </div>
           <div class="project-body">
             <div class="project-top"><span class="app-icon i-purple"><i class="iconoir-brain" aria-hidden="true"></i></span><span class="meta">Embodied AI · 2025</span></div>
-            <h3>RoboBrain 2.0</h3>
+            <h3>RoboBrain 2.0 Extension</h3>
             <p>Extended the RoboBrain 2.0 vision-language model with multi-turn memory and an agentic LLM planning layer. A complex instruction is split into grounding, affordance and trajectory steps, and 8-bit quantization halves GPU memory for constrained hardware.</p>
             <div class="project-foot"><div class="result"><b>−50%</b><span>GPU memory, 8-bit</span></div><div class="tags"><span>PyTorch</span><span>Qwen2.5-VL</span><span>Quantization</span></div></div>
-            <a class="go" href="https://github.com/JayxTG/Robobrain-2.0" target="_blank" rel="noopener" aria-label="Open RoboBrain 2.0 on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
+            <a class="go" href="https://github.com/JayxTG/Robobrain-2.0" target="_blank" rel="noopener" aria-label="Open RoboBrain 2.0 Extension on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
           </div>
         </article>
         <article class="card project feature reveal" data-magnet>
@@ -145,22 +173,6 @@
             <div class="project-foot"><div class="result"><b>NEMA 17</b><span>Stepper-driven axes</span></div><div class="tags"><span>SolidWorks</span><span>PCB Design</span><span>OpenCV</span></div></div>
             <a class="go" href="https://github.com/Pick-and-Place-Robot/Assembling-Part" target="_blank" rel="noopener" aria-label="Open the pick-and-place robot on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
           </div>
-        </article>
-      </div>
-      <div class="grid two">
-        <article class="card project reveal" data-magnet>
-          <div class="project-top"><span class="app-icon i-blue"><i class="iconoir-eye" aria-hidden="true"></i></span><span class="meta">Vision · Medical Imaging · 2025–26</span></div>
-          <h3>GPU-Accelerated Robotic Ultrasound</h3>
-          <p>CUDA-accelerated computer vision for autonomous anatomical landmark detection. Reduced processing latency by 40% while targeting real-time clinical use.</p>
-          <div class="project-foot"><div class="result"><b>−40%</b><span>Processing latency</span></div><div class="tags"><span>CUDA</span><span>OpenCV</span><span>Deep Learning</span></div></div>
-          <a class="go" href="mailto:gammunedjt.21@uom.lk?subject=Robotic%20ultrasound" aria-label="Contact about robotic ultrasound"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
-        </article>
-        <article class="card project reveal" data-magnet>
-          <div class="project-top"><span class="app-icon i-green"><i class="iconoir-electronics-chip" aria-hidden="true"></i></span><span class="meta">Control · Embedded · 2024</span></div>
-          <h3>Micromouse Motor Control</h3>
-          <p>STM32 field-oriented control with FloodFill navigation for high-speed autonomous maze traversal.</p>
-          <div class="project-foot"><div class="result"><b>FOC</b><span>Motor control</span></div><div class="tags"><span>STM32</span><span>FOC</span><span>Embedded C</span></div></div>
-          <a class="go" href="https://github.com/JayxTG/SLRC-2024" target="_blank" rel="noopener" aria-label="Open micromouse on GitHub"><i class="iconoir-arrow-up-right" aria-hidden="true"></i></a>
         </article>
       </div>
       <div class="more reveal"><a class="pill-btn ghost" href="https://github.com/JayxTG?tab=repositories" target="_blank" rel="noopener"><i class="iconoir-github" aria-hidden="true"></i> Browse the full repository</a></div>

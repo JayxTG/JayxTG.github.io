@@ -1,0 +1,13 @@
+# Editor index (1 GB+, over GitHub's file limit)
+.vscode/
+
+# Raw source images; the site uses the resized copies in img/projects/
+BCI-for-Locked-in-Paediatric-Patient_images/
+Pick-and-Place-Robot_Assembling-Part_images/
+RoboBrain/
+
+# Unpublished paper source
+IEEE_Conference_Research_Paper_V1_5/
+
+# Unpublished work kept out of the public site
+drafts/
